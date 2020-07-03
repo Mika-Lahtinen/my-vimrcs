@@ -85,6 +85,7 @@ Plug 'jimenezrick/vimerl'
 Plug 'junegunn/fzf'
 Plug 'janko-m/vim-test'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
