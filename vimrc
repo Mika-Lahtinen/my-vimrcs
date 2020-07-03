@@ -82,6 +82,10 @@ Plug 'ParamagicDev/vim-medic_chalk'
 Plug 'elixir-lang/vim-elixir'
 Plug 'derekwyatt/vim-scala'
 Plug 'jimenezrick/vimerl'
+Plug 'junegunn/fzf'
+Plug 'janko-m/vim-test'
+Plug 'kien/rainbow_parentheses.vim'
+
 call plug#end()
 
 " Colors
