@@ -19,6 +19,10 @@ set showcmd
 set cmdheight=1
 set laststatus=2
 set history=100
+" When adding this vimrc into WSL,
+" 'modifiable' occurs error when not set,
+" so here add it, you can change this configuration later
+set modifiable
 
 let mapleader=","
 
