@@ -64,7 +64,7 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'fatih/vim-go'
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-snippets'
 Plug 'neoclide/coc-prettier'
 Plug 'rust-lang/rust.vim'
