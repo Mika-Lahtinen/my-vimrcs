@@ -90,6 +90,10 @@ Plug 'junegunn/fzf'
 Plug 'janko-m/vim-test'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-surround'
+Plug 'vim-crystal/vim-crystal'
+Plug 'zah/nim.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
