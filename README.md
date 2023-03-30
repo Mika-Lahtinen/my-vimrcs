@@ -5,3 +5,5 @@ My vimrc for development
 2. Clone the repository to ~/.vim/
 3. Open Vim, type ":PlugInstall"
 4. Have fun typing.
+# Language Support
+Rust, Scala, Elixir, Erlang.
