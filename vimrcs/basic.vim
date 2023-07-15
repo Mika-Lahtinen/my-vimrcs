@@ -19,6 +19,9 @@ set showcmd
 set cmdheight=1
 set laststatus=2
 set history=100
+
+set nobackup
+set nowritebackup
 " When adding this vimrc into WSL,
 " 'modifiable' occurs error when not set,
 " so here add it, you can change this configuration later
