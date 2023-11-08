@@ -1,24 +1,18 @@
 " General 
 """""""""""
-set number
-set relativenumber
 set cursorline
-set ruler
 set nocompatible
+set clipboard+=unnamed
 filetype on
 filetype plugin on
-set noeb
+set noerrorbells
 syntax enable
 syntax on
-set t_Co=256
-set showcmd
 set ttimeoutlen=0
 set mouse=a
-map <silent> <C-A> gg v G
 set showcmd
-set cmdheight=1
-set laststatus=2
-set history=100
+set cmdheight=2
+set history=1024
 
 set nobackup
 set nowritebackup
@@ -27,7 +21,33 @@ set nowritebackup
 " so here add it, you can change this configuration later
 set modifiable
 
-let mapleader=","
+" Display
+""""""""""
+set t_Co=256
+set wrap
+set wrapmargin=2
+set linebreak
+set laststatus=2
+set ruler
+set splitright
+set splitbelow
+augroup show_line_numbers
+    autocmd!
+    autocmd BufNewFile,BufRead,BufWrite * :set number
+    autocmd InsertEnter * :set relativenumber
+    autocmd InsertLeave * :set norelativenumber
+augroup end
+
+if has('gui_running')
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=l
+    set guioptions-=b
+    if has('win32')
+	    set guifont=Cascadia_Code:h12
+    endif
+endif
 
 
 " Indent
@@ -35,7 +55,7 @@ let mapleader=","
 set autoindent
 set cindent
 set smartindent
-set cinoptions=g0,:0,N-s,(0
+set cinoptions=g0,:0,N-s,(0,j1,J1
 filetype indent on
 set expandtab
 set tabstop=4
@@ -50,6 +70,7 @@ set sidescroll=10
 set hlsearch
 set incsearch
 set ignorecase
+set smartcase
 
 " Caches
 """""""""
@@ -63,7 +84,7 @@ set confirm
 set langmenu=zh_CN.UTF-8
 set helplang=cn
 set termencoding=utf-8
-set encoding=utf8
+set encoding=utf-8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
 " Wild menu
