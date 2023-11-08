@@ -6,7 +6,7 @@ Plug 'vim-test/vim-test'
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdcommenter'
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'Donaldttt/fuzzyy'
 Plug 'nanotech/jellybeans.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mileszs/ack.vim'
