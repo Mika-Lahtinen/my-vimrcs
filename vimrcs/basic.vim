@@ -5,6 +5,7 @@ set nocompatible
 set clipboard+=unnamed
 filetype on
 filetype plugin on
+set fileformat=unix
 set noerrorbells
 syntax enable
 syntax on
