@@ -12,7 +12,7 @@ syntax on
 set ttimeoutlen=0
 set mouse=a
 set showcmd
-set cmdheight=2
+set cmdheight=1
 set history=1024
 
 set nobackup
