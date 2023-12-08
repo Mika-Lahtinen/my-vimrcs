@@ -1,6 +1,6 @@
 " Plugins I use
 """"""""""""""
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 " Basic Settings
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-surround'
