@@ -9,7 +9,6 @@ set fileformat=unix
 set noerrorbells
 syntax enable
 syntax on
-set ttimeoutlen=0
 set mouse=a
 set showcmd
 set cmdheight=1
@@ -45,8 +44,9 @@ if has('gui_running')
     set guioptions-=r
     set guioptions-=l
     set guioptions-=b
-    if has('win32')
-	    set guifont=Cascadia_Code:h12
+    if has('win32') || has('win64')
+	    set guifont=Hasklug_Nerd_Font:h12
+        set guifontwide=Fixedsys:h12
     endif
 endif
 
@@ -63,7 +63,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set smarttab
-set backspace=2
+set backspace=indent,eol,start
 set sidescroll=10
 
 " Settings for searching

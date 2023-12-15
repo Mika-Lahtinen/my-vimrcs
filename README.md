@@ -4,6 +4,7 @@ My vimrc for development
 ## How to use it
 1. Before cloning the repo, make sure Node.js is installed.
 2. Clone the repository to your PC and install by the following command:
+
 *Linux/MacOS*
 ```
 git clone --depth=1 git@github.com:Mika-Lahtinen/my-vimrcs.git ~/.vim
