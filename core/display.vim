@@ -11,13 +11,15 @@ Plug 'ryanoasis/vim-devicons'
 
 " NERDTree
 Plug 'preservim/nerdtree'
+
 " NERDTree settings
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=40
 
 " Colorscheme settings
-colorscheme lightning
+colorscheme macvim-light
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='light'
+let g:airline_theme='hybrid'
 let g:airline_powerline_fonts = 1

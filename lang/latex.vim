@@ -12,6 +12,8 @@ let g:vimtex_quickfix_mode = 0
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
+autocmd FileType tex call lsp#disable()
+
 if has('win32') || has('win64')
     let g:vimtex_view_method = 'sioyek'
     let g:vimtex_view_sioyek_exe='sioyek.exe'

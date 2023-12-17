@@ -45,7 +45,7 @@ if has('gui_running')
     set guioptions-=l
     set guioptions-=b
     if has('win32') || has('win64')
-	    set guifont=Hasklug_Nerd_Font:h12
+	    set guifont=CaskaydiaCove_NFM:h12
         set guifontwide=Fixedsys:h12
     endif
 endif
