@@ -14,7 +14,7 @@ Plug 'preservim/nerdtree'
 
 " NERDTree settings
 map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeWinSize=40
+let g:NERDTreeWinSize=20
 
 " Colorscheme settings
 colorscheme macvim-light
