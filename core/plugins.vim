@@ -6,6 +6,7 @@ runtime! core/display.vim
 runtime! core/coding.vim
 
 " Languages
+runtime! lang/ccpp.vim
 runtime! lang/go.vim
 runtime! lang/rust.vim
 runtime! lang/elixir.vim

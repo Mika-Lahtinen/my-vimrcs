@@ -48,7 +48,8 @@ let g:ale_linters = {
 \    'cpp': ['clangd', 'clang-format', 'gcc'],
 \    'rust': ['rust-analyzer', 'cargo', 'rustfmt'],
 \    'go': ['gopls', 'gofmt'],
-\    'python': ['autopep8']
+\    'python': ['autopep8'],
+\    'haskell': ['hls']
 \ }
 let g:ale_completion_enabled = 1
 
