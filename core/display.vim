@@ -2,6 +2,9 @@
 " Must be loaded after 'plugins.vim'
 """"""""""""""""""""""""""""""""""""
 
+" Startify
+Plug 'mhinz/vim-startify'
+
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -17,7 +20,7 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=20
 
 " Colorscheme settings
-colorscheme macvim-light
+colorscheme valloric
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1

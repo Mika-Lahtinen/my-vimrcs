@@ -32,14 +32,16 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " LSP
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Auto completion in async way
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 " Async complete settings
+" inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " ALE settings
 let g:airline#extensions#ale#enabled = 1
@@ -57,16 +59,27 @@ let g:ale_completion_enabled = 1
 au BufWrite * :Autoformat
 
 " Ultisnips settings
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
 " LSP settings
-autocmd FileType vim call lsp#disable()
+" autocmd FileType vim call lsp#disable()
 
 " Lightweight auto complete
 let g:apc_enable_ft = {'text':1, 'markdown':1, 'python':1}
 set cpt=.,k,w,b
 set completeopt=menu,menuone,noselect,noinsert
 set shortmess+=c
+
+" Coc.nvim settings
+" The following settings are spring from Coc.nvim official document.
+" Global extexsions
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-ultisnips']
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+

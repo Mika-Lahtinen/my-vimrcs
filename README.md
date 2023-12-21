@@ -1,6 +1,9 @@
 # my-vimrcs
 My vimrc for development
 
+## Prerequisite
+Node.js
+
 ## How to use it
 1. Clone the repository to your PC and install by the following command:
 
