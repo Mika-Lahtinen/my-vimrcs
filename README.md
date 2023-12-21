@@ -9,12 +9,12 @@ Node.js
 
 *Linux/MacOS*
 ```
-git clone --depth=1 git@github.com:Mika-Lahtinen/my-vimrcs.git ~/.vim
+git clone --depth=1 https://github.com/Mika-Lahtinen/my-vimrcs.git ~/.vim
 ```
 
 *Microsoft Windows*
 ```
-git clone --depth=1 git@github.com:Mika-Lahtinen/my-vimrcs.git $HOME/vimfiles
+git clone --depth=1 https://github.com/Mika-Lahtinen/my-vimrcs.git $HOME/vimfiles
 ```
 
 2. Open Vim, type ":PlugInstall"
