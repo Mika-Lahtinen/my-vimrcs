@@ -25,7 +25,7 @@ Plug 'skywind3000/vim-auto-popmenu'
 Plug 'skywind3000/vim-dict'
 
 " Tags
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 
 " Snippets
 Plug 'SirVer/ultisnips'
