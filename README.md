@@ -21,4 +21,4 @@ git clone --depth=1 https://github.com/Mika-Lahtinen/my-vimrcs.git $HOME/vimfile
 3. Have fun typing.
 
 ## Language Support
-Rust, Elixir, Erlang.
+Rust, Elixir, Erlang, Haskell, C/C++, Python.
