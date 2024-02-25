@@ -2,7 +2,7 @@
 My vimrc for development
 
 ## Prerequisite
-Node.js
+Node.js if you prefer using Coc.nvim.
 
 ## How to use it
 1. Clone the repository to your PC and install by the following command:
