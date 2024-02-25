@@ -16,3 +16,6 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " Explore buffers
  Plug 'jlanzarotta/bufexplorer'
+
+" LeaderF settings
+let g:Lf_WindowPosition = 'popup'
