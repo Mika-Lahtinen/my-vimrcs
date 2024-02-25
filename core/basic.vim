@@ -5,7 +5,7 @@ set nocompatible
 set clipboard+=unnamed
 filetype on
 filetype plugin on
-set fileformat=unix
+set fileformat=unix,dos
 set noerrorbells
 syntax enable
 syntax on
@@ -44,6 +44,7 @@ if has('gui_running')
     set guioptions-=r
     set guioptions-=l
     set guioptions-=b
+    set fileformat=unix,dos
     if has('win32') || has('win64')
 	    set guifont=CaskaydiaCove_NFM:h12
         set guifontwide=Fixedsys:h12

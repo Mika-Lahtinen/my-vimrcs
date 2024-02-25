@@ -3,11 +3,10 @@
 """"""""""""""""""""""""""""""""""""
 
 " Startify
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Status line plugins
+Plug 'itchyny/lightline.vim'
 
 " Devicons
 Plug 'ryanoasis/vim-devicons'
@@ -16,13 +15,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
 
 " NERDTree settings
-map <C-n> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 let g:NERDTreeWinSize=20
 
 " Colorscheme settings
-colorscheme valloric
+colorscheme chela_light
 
 " Airline settings
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='hybrid'
-let g:airline_powerline_fonts = 1
+let g:lightline = {
+      \ 'colorscheme': 'rosepine',
+      \ }
