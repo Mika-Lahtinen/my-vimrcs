@@ -1,4 +1,4 @@
-" General 
+" General
 """""""""""
 set cursorline
 set nocompatible
@@ -46,7 +46,7 @@ if has('gui_running')
     set guioptions-=b
     set fileformat=unix
     if has('win32') || has('win64')
-	    set guifont=CaskaydiaCove_NFM:h12
+        set guifont=CaskaydiaCove_NFM:h12
         set guifontwide=Fixedsys:h12
     endif
     if has('linux')

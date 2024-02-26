@@ -53,13 +53,13 @@ inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 " ALE settings
 let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {
-\    'c': ['clangd', 'clang-format', 'gcc'],
-\    'cpp': ['clangd', 'clang-format', 'gcc'],
-\    'rust': ['rust-analyzer', 'cargo', 'rustfmt'],
-\    'go': ['gopls', 'gofmt'],
-\    'python': ['autopep8'],
-\    'haskell': ['hls']
-\ }
+                  \    'c': ['clangd', 'clang-format', 'gcc'],
+                  \    'cpp': ['clangd', 'clang-format', 'gcc'],
+                  \    'rust': ['rust-analyzer', 'cargo', 'rustfmt'],
+                  \    'go': ['gopls', 'gofmt'],
+                  \    'python': ['autopep8'],
+                  \    'haskell': ['hls']
+                  \ }
 let g:ale_completion_enabled = 1
 " let g:ale_disable_lsp = 1
 
