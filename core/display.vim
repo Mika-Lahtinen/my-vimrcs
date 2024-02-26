@@ -20,9 +20,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 let g:NERDTreeWinSize=20
 
 " Colorscheme settings
-colorscheme chela_light
+colorscheme habiLight
 
 " Airline settings
 let g:lightline = {
-      \ 'colorscheme': 'rosepine',
+      \ 'colorscheme': 'nord',
       \ }
