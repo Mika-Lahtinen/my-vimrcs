@@ -50,7 +50,7 @@ if has('gui_running')
         set guifontwide=Fixedsys:h12
     endif
     if has('linux')
-        set guifont=BitstromWera\ Nerd\ Font\ 10
+        set guifont=Monospace\ 10
     endif
 endif
 
