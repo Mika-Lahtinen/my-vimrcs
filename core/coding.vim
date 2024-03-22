@@ -58,7 +58,6 @@ let g:ale_linters = {
                   \    'rust': ['rust-analyzer', 'cargo', 'rustfmt'],
                   \    'go': ['gopls', 'gofmt'],
                   \    'python': ['autopep8'],
-                  \    'elixir': ['elixir-ls'],
                   \    'haskell': ['hls']
                   \ }
 let g:ale_completion_enabled = 1
