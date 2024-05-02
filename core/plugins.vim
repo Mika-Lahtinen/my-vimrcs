@@ -9,8 +9,9 @@ runtime! core/coding.vim
 runtime! lang/contracts.vim
 runtime! lang/ccpp.vim
 " runtime! lang/go.vim
+" runtime! lang/python.vim
 runtime! lang/rust.vim
-" runtime! lang/elixir.vim
+runtime! lang/elixir.vim
 " runtime! lang/erlang.vim
 " runtime! lang/haskell.vim
 " runtime! lang/ocaml.vim
