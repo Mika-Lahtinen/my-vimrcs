@@ -8,6 +8,9 @@ Plug 'dense-analysis/ale'
 " Run code test
 Plug 'vim-test/vim-test'
 
+" Project manager.
+Plug 'tpope/vim-projectionist'
+
 " Add comment
 Plug 'preservim/nerdcommenter'
 
@@ -58,6 +61,7 @@ let g:ale_linters = {
                   \    'rust': ['rust-analyzer', 'cargo', 'rustfmt'],
                   \    'go': ['gopls', 'gofmt'],
                   \    'python': ['autopep8'],
+                  \    'elixir': ['mix_format'],
                   \    'haskell': ['hls']
                   \ }
 let g:ale_completion_enabled = 1
