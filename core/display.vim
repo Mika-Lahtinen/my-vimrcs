@@ -20,7 +20,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 let g:NERDTreeWinSize=20
 
 " Colorscheme settings
-colorscheme xedit
+colorscheme raggi
 
 " Airline settings
 let g:lightline = {
