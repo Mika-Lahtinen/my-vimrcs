@@ -19,7 +19,7 @@ set nowritebackup
 " When adding this vimrc into WSL,
 " 'modifiable' occurs error when not set,
 " so here add it, you can change this configuration later
-set modifiable
+"set modifiable
 
 " Display
 """"""""""
