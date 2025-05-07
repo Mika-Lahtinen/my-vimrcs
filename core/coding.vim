@@ -75,7 +75,13 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 
 " Auto format settings
-au BufWrite * :Autoformat
+au BufWrite *.c,*.h :Autoformat
+au BufWrite *.cpp,*.hpp,*.cxx,*.cc :Autoformat
+au BufWrite *.rs :Autoformat
+au BufWrite *.hs :Autoformat
+au BufWrite *.ml :Autoformat
+au BufWrite *.py :Autoformat
+au BufWrite *.ex,*.exs :Autoformat
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger="<c-e>"
