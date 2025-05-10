@@ -1,0 +1,1 @@
+Plug 'kaarmu/typst.vim'
