@@ -19,7 +19,7 @@ runtime! lang/ruby.vim
 
 runtime! lang/markdown.vim
 " runtime! lang/latex.vim
-" runtime! lang/typst.vim
+runtime! lang/typst.vim
 
 " Tools
 runtime! tools/general.vim
