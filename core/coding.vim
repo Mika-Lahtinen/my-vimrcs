@@ -24,7 +24,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'LunarWatcher/auto-pairs'
 
 " Format code plugins
-Plug 'vim-autoformat/vim-autoformat'
+" Plug 'vim-autoformat/vim-autoformat'
+Plug 'sbdchd/neoformat'
 
 " Auto completion without LSP
 Plug 'skywind3000/vim-auto-popmenu'
@@ -78,13 +79,13 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 
 " Auto format settings
-au BufWrite *.c,*.h :Autoformat
-au BufWrite *.cpp,*.hpp,*.cxx,*.cc :Autoformat
-au BufWrite *.rs :Autoformat
-au BufWrite *.hs :Autoformat
-au BufWrite *.ml :Autoformat
-au BufWrite *.py :Autoformat
-au BufWrite *.ex,*.exs :Autoformat
+au BufWritePre *.c,*.h Neoformat
+" au BufWrite *.cpp,*.hpp,*.cxx,*.cc :Autoformat
+au BufWritePre *.rs Neoformat
+" au BufWrite *.hs :Autoformat
+" au BufWrite *.ml :Autoformat
+" au BufWrite *.py :Autoformat
+" au BufWrite *.ex,*.exs :Autoformat
 
 " Ultisnips settings
 " let g:UltiSnipsExpandTrigger="<c-e>"
