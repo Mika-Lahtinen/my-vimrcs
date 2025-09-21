@@ -3,6 +3,9 @@ Plug 'tpope/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'dhruvasagar/vim-table-mode'
 
+" Vim-markdown settings
+let g:vim_markdown_math = 1
+
 " Makrdown Preview settings
 let g:mkdp_preview_options = {
             \ 'mkit': {},
