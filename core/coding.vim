@@ -80,12 +80,12 @@ let g:ale_lint_on_insert_leave = 1
 
 " Auto format settings
 au BufWritePre *.c,*.h Neoformat
-" au BufWrite *.cpp,*.hpp,*.cxx,*.cc :Autoformat
+au BufWrite *.cpp,*.hpp,*.cxx,*.cc Neoformat
 au BufWritePre *.rs Neoformat
-" au BufWrite *.hs :Autoformat
-" au BufWrite *.ml :Autoformat
-" au BufWrite *.py :Autoformat
-" au BufWrite *.ex,*.exs :Autoformat
+au BufWrite *.hs Neoformat
+au BufWrite *.ml Neoformat
+au BufWrite *.py Neoformat
+au BufWrite *.ex,*.exs Neoformat
 
 " Ultisnips settings
 " let g:UltiSnipsExpandTrigger="<c-e>"
