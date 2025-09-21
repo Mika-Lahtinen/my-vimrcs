@@ -17,7 +17,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " Explore buffers
- Plug 'jlanzarotta/bufexplorer'
+Plug 'jlanzarotta/bufexplorer'
+
+" Calendar
+Plug 'itchyny/calendar.vim'
 
 " LeaderF settings
 let g:Lf_WindowPosition = 'popup'

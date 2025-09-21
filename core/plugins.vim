@@ -23,7 +23,6 @@ runtime! lang/typst.vim
 
 " Tools
 runtime! tools/general.vim
-runtime! tools/orgmode.vim
 runtime! tools/wiki_note.vim
 
 
