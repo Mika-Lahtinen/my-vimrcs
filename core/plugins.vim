@@ -15,6 +15,7 @@ runtime! lang/elixir.vim
 " runtime! lang/erlang.vim
 " runtime! lang/haskell.vim
 " runtime! lang/racket.vim
+runtime! lang/moonbit.vim
 runtime! lang/ocaml.vim
 runtime! lang/ruby.vim
 

@@ -1,0 +1,1 @@
+Plug 'mattn/vim-moonbit'
