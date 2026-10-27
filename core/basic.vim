@@ -1,7 +1,7 @@
 " General
 """""""""""
-set cursorline
 set nocompatible
+set cursorline
 
 " Clipboard: use Vim's native clipboard when available, and fall back to the
 " bundled OSC 52 provider (e.g. over SSH or in terminals without X11 access).
@@ -20,7 +20,6 @@ filetype plugin on
 set fileformat=unix
 set noerrorbells
 syntax enable
-syntax on
 set mouse=a
 set showcmd
 set cmdheight=1
@@ -57,7 +56,6 @@ if has('gui_running')
     set guioptions-=r
     set guioptions-=l
     set guioptions-=b
-    set fileformat=unix
     if has('win32') || has('win64')
         set guifont=CaskaydiaCove_NFM:h12
         set guifontwide=Fixedsys:h12
@@ -72,7 +70,7 @@ endif
 """"""""""
 set autoindent
 set cindent
-set smartindent
+" 'smartindent' has no effect while 'cindent' is enabled.
 set cinoptions=g0,:0,N-s,(0,j1,J1
 filetype indent on
 set expandtab

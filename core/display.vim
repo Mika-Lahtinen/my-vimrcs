@@ -15,9 +15,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdtree'
 
 " NERDTree settings
-map <C-t> :NERDTreeToggle<CR>
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-let g:NERDTreeWinSize=20
+nnoremap <silent> <C-t> :NERDTreeToggle<CR>
+augroup nerdtree_settings
+    autocmd!
+    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+augroup END
+let g:NERDTreeWinSize = 20
 
 " Colorscheme settings
 colorscheme breeze

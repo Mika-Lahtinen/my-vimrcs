@@ -16,6 +16,7 @@ runtime! lang/python.vim
 runtime! lang/moonbit.vim
 
 runtime! lang/markdown.vim
+" LaTeX is optional: install vimtex, then uncomment this line.
 " runtime! lang/latex.vim
 runtime! lang/typst.vim
 

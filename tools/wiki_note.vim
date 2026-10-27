@@ -1,6 +1,7 @@
 " Taking notes by using wiki
 Plug 'vimwiki/vimwiki'
-Plug 'patrickdavey/vimwiki_markdown'
+" vimwiki's optional Markdown HTML exporter is the external Ruby gem
+" `vimwiki_markdown`, not a Vim plugin; install it separately if needed.
 
 " Please add your configurations below after installing plugins.
 " let g:vimwiki_list = [{'path': '~/vimwiki/',

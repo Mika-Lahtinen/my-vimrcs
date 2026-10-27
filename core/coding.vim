@@ -66,6 +66,55 @@ set omnifunc=ale#completion#OmniFunc
 set completeopt=menu,menuone,preview,noselect,noinsert
 set shortmess+=c
 
+" ALE only uses its hardcoded multi-character triggers (Rust `::`, C++ `->`,
+" etc.) when the LSP server advertises no trigger characters at all.  Servers
+" such as rust-analyzer advertise `:` instead of `::`, so ALE would otherwise
+" filter every suggestion out after typing `std::`.  Merge ALE's own triggers
+" into each connection when the server starts.
+function! s:ALEAddMissingTriggers() abort
+    let l:trigger_map = ale#completion#GetAllTriggers()
+    let l:extra_triggers = {
+                \ 'ruby': ['::'],
+                \ }
+
+    for l:conn in values(ale#lsp#GetConnections())
+        let l:language = get(l:conn, 'language', '')
+        let l:extra = []
+
+        for l:part in reverse(split(l:language, '\.'))
+            let l:extra = get(l:trigger_map, l:part, [])
+            if !empty(l:extra)
+                break
+            endif
+        endfor
+
+        if empty(l:extra)
+            let l:extra = get(l:trigger_map, '<default>', [])
+        endif
+
+        let l:extra = l:extra + get(l:extra_triggers, l:language, [])
+
+        if empty(l:extra)
+            continue
+        endif
+
+        let l:triggers = get(l:conn.capabilities, 'completion_trigger_characters', [])
+
+        for l:char in l:extra
+            if index(l:triggers, l:char) < 0
+                call add(l:triggers, l:char)
+            endif
+        endfor
+
+        let l:conn.capabilities.completion_trigger_characters = l:triggers
+    endfor
+endfunction
+
+augroup ale_missing_triggers
+    autocmd!
+    autocmd User ALELSPStarted call s:ALEAddMissingTriggers()
+augroup END
+
 " Auto format settings
 " Neoformat silently skips formatters that are not installed, so it is safe to
 " list more filetypes than you have formatters for. Remove entries you never
@@ -73,8 +122,17 @@ set shortmess+=c
 " vim-polyglot vendors rust.vim's ftplugin, which can also run rustfmt on save.
 " Keep it off so only Neoformat formats Rust.
 let g:rustfmt_autosave = 0
-let g:neoformat_enabled_c = ['clangformat', 'uncrustify', 'astyle']
-let g:neoformat_enabled_cpp = ['clangformat', 'uncrustify', 'astyle']
+
+" C/C++: use clang-format's Microsoft style.  Only clang-format is enabled
+" here; astyle/uncrustify would silently fall back to a different style.
+let g:neoformat_c_clangformat = {
+            \ 'exe': 'clang-format',
+            \ 'args': ['-style=Microsoft', '-assume-filename=%'],
+            \ 'stdin': 1,
+            \ }
+let g:neoformat_cpp_clangformat = deepcopy(g:neoformat_c_clangformat)
+let g:neoformat_enabled_c = ['clangformat']
+let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_on_save_filetypes = [
             \ 'c', 'cpp', 'rust', 'go', 'python', 'elixir', 'ocaml', 'ruby',
             \ 'erlang', 'haskell',
