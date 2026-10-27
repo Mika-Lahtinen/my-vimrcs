@@ -1,8 +1,6 @@
 let python_highlight_all=1
-au Filetype python set tabstop=4
-au Filetype python set softtabstop=4
-au Filetype python set shiftwidth=4
-au Filetype python set textwidth=79
-au Filetype python set expandtab
-au Filetype python set autoindent
-au Filetype python set fileformat=unix
+
+augroup python_settings
+    autocmd!
+    autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+augroup END

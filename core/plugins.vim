@@ -6,18 +6,14 @@ runtime! core/display.vim
 runtime! core/coding.vim
 
 " Languages
+" Syntax, indent and ftplugin support for most languages comes from
+" vim-polyglot. Only load files for languages polyglot does not cover or for
+" settings that are specific to this configuration.
 runtime! lang/contracts.vim
 runtime! lang/ccpp.vim
 runtime! lang/go.vim
 runtime! lang/python.vim
-runtime! lang/rust.vim
-runtime! lang/elixir.vim
-" runtime! lang/erlang.vim
-" runtime! lang/haskell.vim
-" runtime! lang/racket.vim
 runtime! lang/moonbit.vim
-runtime! lang/ocaml.vim
-runtime! lang/ruby.vim
 
 runtime! lang/markdown.vim
 " runtime! lang/latex.vim

@@ -7,6 +7,12 @@
 " Search tools
 " Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'mileszs/ack.vim'
+
+" Use ripgrep as the backend for :Ack (rg --vimgrep is what ack.vim parses).
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
+endif
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -21,6 +27,3 @@ Plug 'jlanzarotta/bufexplorer'
 
 " Calendar
 Plug 'itchyny/calendar.vim'
-
-" LeaderF settings
-let g:Lf_WindowPosition = 'popup'

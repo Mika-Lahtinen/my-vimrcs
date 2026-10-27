@@ -1,9 +1,9 @@
 " Markdown
-Plug 'tpope/vim-markdown'
+" Syntax and ftplugin come from vim-polyglot.
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'dhruvasagar/vim-table-mode'
 
-" Vim-markdown settings
+" Markdown settings
 let g:vim_markdown_math = 1
 
 " Makrdown Preview settings

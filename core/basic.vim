@@ -2,7 +2,19 @@
 """""""""""
 set cursorline
 set nocompatible
-set clipboard+=unnamed
+
+" Clipboard: use Vim's native clipboard when available, and fall back to the
+" bundled OSC 52 provider (e.g. over SSH or in terminals without X11 access).
+" Use ^= instead of += because the default X11 value ends with "exclude:...",
+" and items appended after it are ignored.
+if has('clipboard_provider')
+    silent! packadd osc52
+    set clipmethod+=osc52
+endif
+if has('clipboard') || has('clipboard_provider')
+    set clipboard^=unnamedplus
+endif
+
 filetype on
 filetype plugin on
 set fileformat=unix
@@ -31,12 +43,13 @@ set laststatus=2
 set ruler
 set splitright
 set splitbelow
+set number
+set relativenumber
 augroup show_line_numbers
     autocmd!
-    autocmd BufNewFile,BufRead,BufWrite * :set number
-    autocmd InsertEnter * :set relativenumber
-    autocmd InsertLeave * :set norelativenumber
-augroup end
+    autocmd InsertEnter * setlocal norelativenumber
+    autocmd InsertLeave * setlocal relativenumber
+augroup END
 
 if has('gui_running')
     set guioptions-=m
