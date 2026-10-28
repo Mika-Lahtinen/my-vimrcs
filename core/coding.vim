@@ -26,7 +26,8 @@ Plug 'LunarWatcher/auto-pairs'
 " Format code
 Plug 'sbdchd/neoformat'
 
-" Snippets
+" Snippets: vim-vsnip is pure Vimscript, and friendly-snippets only supplies
+" JSON snippet data; neither needs Python, Node or another runtime.
 Plug 'hrsh7th/vim-vsnip'
 Plug 'rafamadriz/friendly-snippets'
 

@@ -52,6 +52,12 @@ C and C++ are formatted on save with clang-format's Microsoft style
 project `.clang-format`; change `-style=Microsoft` in `core/coding.vim` to
 `-style=file` if project-local styles should win.
 
+## Snippets
+Snippets are provided by vim-vsnip (pure Vimscript) with friendly-snippets
+(JSON data only), so there is no Python or Node dependency.  Expand with
+`<C-j>`, expand or jump with `<C-l>`, and jump between placeholders with
+`<Tab>` / `<S-Tab>`.  `:VsnipOpen` creates user snippets under `~/.vsnip`.
+
 ## Language Support
 Syntax and indentation come from vim-polyglot, with dedicated plugins only for
 languages it does not cover (Typst, MoonBit, Move).  ALE provides linting,
