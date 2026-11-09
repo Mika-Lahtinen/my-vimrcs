@@ -52,6 +52,7 @@ let g:ale_linters = {
             \    'elixir': ['elixir_ls'],
             \    'ocaml': ['ocamllsp'],
             \    'ruby': ['solargraph', 'rubocop'],
+            \    'haskell': ['hls', 'hlint'],
             \ }
 let g:ale_completion_enabled = 1
 let g:ale_linters_explicit = 1

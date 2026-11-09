@@ -4,10 +4,10 @@ My vimrc for development
 ## Prerequisite
 Vim 8+ (9.x recommended).  ALE and Neoformat use external tools when they are
 available, for example clangd, rust-analyzer, gopls, pylsp/ruff, elixir_ls,
-ocamllsp and solargraph for linting/completion, and clang-format, rustfmt,
-gofmt and prettier for formatting.  fzf uses ripgrep (`rg`) for file and text
-search when it is installed, and ack.vim also uses ripgrep as its backend.
-Missing tools are skipped.
+ocamllsp, solargraph and haskell-language-server for linting/completion, and
+clang-format, rustfmt, gofmt, ormolu and prettier for formatting.  fzf uses
+ripgrep (`rg`) for file and text search when it is installed, and ack.vim also
+uses ripgrep as its backend.  Missing tools are skipped.
 
 ## How to use it
 1. Clone the repository to your PC and install by the following command:
@@ -51,6 +51,25 @@ C and C++ are formatted on save with clang-format's Microsoft style
 (4-space indentation, Allman braces).  The style is explicit, so it overrides a
 project `.clang-format`; change `-style=Microsoft` in `core/coding.vim` to
 `-style=file` if project-local styles should win.
+
+Haskell is formatted on save with `ormolu` when it is installed.
+
+## Haskell
+Syntax and indentation come from vim-polyglot, so no additional Vim plugin is
+needed.  ALE uses `haskell-language-server` (HLS) for completion and
+diagnostics; `hlint` is optional.  Install HLS with `ghcup install hls`, and
+ensure `haskell-language-server-wrapper` is on `PATH`.  If HLS is not
+installed, the configuration falls back to `ghc` for linting, but Haskell
+completion will not be available.
+
+```sh
+# Optional: additional hints and formatting
+cabal install hlint ormolu
+```
+
+The built-in Vim Haskell ftplugin normally replaces `omnifunc` with
+`haskellcomplete`; this configuration overrides it on `FileType haskell` so
+both automatic completion and manual `<C-x><C-o>` use ALE/HLS.
 
 ## Snippets
 Snippets are provided by vim-vsnip (pure Vimscript) with friendly-snippets
